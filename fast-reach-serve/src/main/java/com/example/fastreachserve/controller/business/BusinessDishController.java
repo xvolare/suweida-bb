@@ -24,7 +24,7 @@ import utils.OBSUtils;
 public class BusinessDishController {
     @Autowired
     private BusinessDishService businessDishService;
-    private final OBSUtils obsUtils = new OBSUtils();
+    public final OBSUtils obsUtils = new OBSUtils();
     @PostMapping("/upload")
     public Result upload(MultipartFile file,Integer id){
         String temp = obsUtils.upload(file);
